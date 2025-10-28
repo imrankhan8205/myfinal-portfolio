@@ -1,15 +1,6 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "buildCommand": "npm run build || echo 'Skipping build errors... proceeding forcefully'",
-  "ignoreCommand": "echo 'Skipping log checks...'",
-  "installCommand": "npm install --legacy-peer-deps --silent",
-  "env": {
-    "NEXT_TELEMETRY_DISABLED": "1"
-  }
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "installCommand": "npm ci || npm install"
 }
